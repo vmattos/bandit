@@ -28,9 +28,13 @@ class Bandit {
     var firstMatch = matches[0];
     var secondPart = lines[i].split(updatedLine + firstMatch)[1];
 
-    lines[i] = updatedLine;
-    lines.splice(i+1, 0, JSON.parse(firstMatch));
-    lines.splice(i+2, 0, secondPart);
+    var updatedLines = [...lines]
+
+    updatedLines[i] = updatedLine;
+    updatedLines.splice(i+1, 0, JSON.parse(firstMatch));
+    updatedLines.splice(i+2, 0, secondPart);
+
+    return updatedLines
   }
 
   _parse(lines, i) {
@@ -40,8 +44,8 @@ class Bandit {
       var refMatch = cursor.match(this._refRegexp);
       var fnMatch = cursor.match(this._fnRegexp);
 
-      if(refMatch) this._updateLines(lines, i, this._refRegexp, refMatch);
-      else if(fnMatch) this._updateLines(lines, i, this._fnRegexp, fnMatch);
+      if(refMatch) lines = this._updateLines(lines, i, this._refRegexp, refMatch);
+      else if(fnMatch) lines = this._updateLines(lines, i, this._fnRegexp, fnMatch);
       else lines[i] = lines[i] + '\n';
     }
 
