@@ -2,7 +2,7 @@
   "name": "bandit",
   "version": "0.0.1",
   "description": "An easy way to include cloud-config files in your cloudformation templates!",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/mocha --reporter spec test/**"
   },
@@ -27,5 +27,8 @@
   "homepage": "https://github.com/vmattos/bandit#readme",
   "devDependencies": {
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "string": "^3.3.1"
   }
 }
