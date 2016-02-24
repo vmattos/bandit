@@ -1,0 +1,25 @@
+{
+  "name": "bandit",
+  "version": "0.0.1",
+  "description": "An easy way to include cloud-config files in your cloudformation templates!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmattos/bandit.git"
+  },
+  "keywords": [
+    "cloudconfig",
+    "cloud-config",
+    "cloudformation",
+    "cloud-formation",
+    "coreos",
+    "cloud-init",
+    "cloudinit"
+  ],
+  "author": "Vitor Mattos <mattos.trk@gmail.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmattos/bandit/issues"
+  },
+  "homepage": "https://github.com/vmattos/bandit#readme"
+}
